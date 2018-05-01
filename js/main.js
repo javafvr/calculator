@@ -18,7 +18,6 @@ $(document).ready(function() {
 	var modelSpecs,
 		modelPrice,
 		modelSpecsHolder,
-<<<<<<< HEAD
 		modelPriceHolder,
 		modelPriceUSDHolder;
 
@@ -26,12 +25,6 @@ $(document).ready(function() {
 	modelPriceHolder = $('#modelPrice');
 	modelPriceUSDHolder = $('#modelPriceUSD');
 
-=======
-		modelPriceHolder;
-
-	modelSpecsHolder = $('#modelSpecs');
-	modelPriceHolder = $('#modelPrice');
->>>>>>> dfba8e443024f6b39fc3cbc7efe50f07f124a64f
 
 	modelPrice = 0;
 	modelSpecs = '';
@@ -39,18 +32,12 @@ $(document).ready(function() {
 	$('#autoForm input').on('change', function() {
 		calculatePrice();
 		compileSpecs();
-<<<<<<< HEAD
 		getCurrency();
-=======
->>>>>>> dfba8e443024f6b39fc3cbc7efe50f07f124a64f
 	});
 	
 	calculatePrice();
 	compileSpecs();
-<<<<<<< HEAD
 	getCurrency();
-=======
->>>>>>> dfba8e443024f6b39fc3cbc7efe50f07f124a64f
 
 	function calculatePrice() {
 		var modelPriceEngine = $('input[name=engine]:checked', '#autoForm').val();
@@ -88,7 +75,6 @@ $(document).ready(function() {
 		return x1 + x2;
 	}
 
-<<<<<<< HEAD
 	function getCurrency() {
 		var currencyUrl = "https://www.cbr-xml-daily.ru/daily_json.js";
 		var rurUsdRate = 0;
@@ -109,15 +95,4 @@ $(document).ready(function() {
 	}
 
 
-=======
-	var currencyUrl = 'https://www.cbr-xml-daily.ru/daily_json.js';
-	var rurUsdRate = 0;
-	$.ajax({
-		url: currencyUrl,
-		cache: false,
-		success: function(html) {
-			console.log(html);
-		}});
-	
->>>>>>> dfba8e443024f6b39fc3cbc7efe50f07f124a64f
 });
